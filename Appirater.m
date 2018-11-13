@@ -263,8 +263,8 @@ static BOOL _alwaysUseMainBundle = NO;
             appirater = [[Appirater alloc] init];
             appirater.eventQueue = [[NSOperationQueue alloc] init];
             appirater.eventQueue.maxConcurrentOperationCount = 1;
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:
-                UIApplicationWillResignActiveNotification object:nil];
+           /* [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:
+                UIApplicationWillResignActiveNotification object:nil];*/
         });
 	}
 	
