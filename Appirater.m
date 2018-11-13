@@ -582,7 +582,7 @@ static BOOL _alwaysUseMainBundle = NO;
 + (void)appWillResignActive {
 	if (_debug)
 		NSLog(@"APPIRATER appWillResignActive");
-	[[Appirater sharedInstance] hideRatingAlert];
+	//[[Appirater sharedInstance] hideRatingAlert];
 }
 
 + (void)appEnteredForeground:(BOOL)canPromptForRating {
