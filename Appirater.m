@@ -571,11 +571,11 @@ static BOOL _alwaysUseMainBundle = NO;
         if (_debug) {
 			NSLog(@"APPIRATER Hiding Alert");
         }
-        if ([self.ratingAlert respondsToSelector:@selector(dismissWithClickedButtonIndex:animated:)]) {
+        /*if ([self.ratingAlert respondsToSelector:@selector(dismissWithClickedButtonIndex:animated:)]) {
             [self.ratingAlert dismissWithClickedButtonIndex:-1 animated:NO];
         } else {
             [self.ratingAlert dismissViewControllerAnimated:NO completion:nil];
-        }
+        }*/
 	}	
 }
 
