@@ -82,7 +82,6 @@ static BOOL _alwaysUseMainBundle = NO;
 - (BOOL)ratingAlertIsAppropriate;
 - (BOOL)ratingConditionsHaveBeenMet;
 - (void)incrementUseCount;
-- (void)hideRatingAlert;
 @end
 
 @implementation Appirater
@@ -263,8 +262,6 @@ static BOOL _alwaysUseMainBundle = NO;
             appirater = [[Appirater alloc] init];
             appirater.eventQueue = [[NSOperationQueue alloc] init];
             appirater.eventQueue.maxConcurrentOperationCount = 1;
-           /* [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:
-                UIApplicationWillResignActiveNotification object:nil];*/
         });
 	}
 	
@@ -564,19 +561,6 @@ static BOOL _alwaysUseMainBundle = NO;
         return ((UIAlertView *)self.ratingAlert).visible;
 #pragma clang diagnostic pop
     }
-}
-
-- (void)hideRatingAlert {
-	if ([self isRatingAlertVisible]) {
-        if (_debug) {
-			NSLog(@"APPIRATER Hiding Alert");
-        }
-        /*if ([self.ratingAlert respondsToSelector:@selector(dismissWithClickedButtonIndex:animated:)]) {
-            [self.ratingAlert dismissWithClickedButtonIndex:-1 animated:NO];
-        } else {
-            [self.ratingAlert dismissViewControllerAnimated:NO completion:nil];
-        }*/
-	}	
 }
 
 + (void)appWillResignActive {
